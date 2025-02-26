@@ -1,40 +1,30 @@
-**/node_modules
-**/.git
-**/.next
-**/.vercel
-**/.env*
-**/README.md
-**/Dockerfile
-**/.dockerignore
-**/.gitignore
-**/.gcloudignore
-**/jest.config.js
-**/next.config.js
-**/tsconfig.json
-**/package-lock.json
-**/yarn.lock
-**/pnpm-lock.yaml
-**/.pnpm-store
-**/.vscode
-**/.idea
-**/.DS_Store
-**/*.md
-**/*.log
-**/__tests__
-**/*.test.*
-**/*.spec.*
-**/coverage
-**/tmp
-**/temp
-**/.turbo
-**/.cache
-**/dist
-**/build
-**/out
-**/.husky
-**/.github
-**/.prettierrc
-**/.eslintrc*
-**/jest.setup.js
-**/postcss.config.js
-**/tailwind.config.js
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Source control
+.git/
+.github/
+.gitignore
+
+# Environment and config
+.env*
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+
+# Misc
+*.log
+.DS_Store
+coverage/
+tmp/
+temp/
+
+# Don't ignore these files
+!next.config.js
+!tsconfig.json
+!package.json
+!pnpm-lock.yaml
