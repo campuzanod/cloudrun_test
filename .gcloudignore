@@ -1,0 +1,32 @@
+# Node
+node_modules
+npm-debug.log
+.pnpm-store/
+
+# Next.js
+.next/
+out/
+
+# Environment
+.env*
+.env.local
+.env.*.local
+
+# Development
+.git
+.gitignore
+README.md
+*.test.js
+*.spec.js
+__tests__
+coverage
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
