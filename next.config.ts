@@ -5,7 +5,6 @@ const nextConfig: NextConfig = {
     OPENAI_API_KEY: process.env.OPENAI_API_KEY || '',
   },
   output: 'standalone',
-  swcMinify: true,
 };
 
 export default nextConfig;
