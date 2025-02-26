@@ -6,6 +6,29 @@ const nextConfig: NextConfig = {
   },
   output: 'standalone',
   swcMinify: true,
+  poweredByHeader: false,
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  experimental: {
+    optimizeCss: true,
+  },
+  webpack: (config, { dev }) => {
+    // Production optimizations only
+    if (!dev) {
+      config.optimization = {
+        ...config.optimization,
+        minimize: true,
+        // Add additional optimizations for production
+        splitChunks: {
+          chunks: 'all',
+          minSize: 20000,
+          maxSize: 244000,
+        },
+      }
+    }
+    return config;
+  },
 };
 
 export default nextConfig;

@@ -1,32 +1,40 @@
-# Node
-node_modules
-npm-debug.log
-.pnpm-store/
-
-# Next.js
-.next/
-out/
-
-# Environment
-.env*
-.env.local
-.env.*.local
-
-# Development
-.git
-.gitignore
-README.md
-*.test.js
-*.spec.js
-__tests__
-coverage
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# OS
-.DS_Store
-Thumbs.db
+**/node_modules
+**/.git
+**/.next
+**/.vercel
+**/.env*
+**/README.md
+**/Dockerfile
+**/.dockerignore
+**/.gitignore
+**/.gcloudignore
+**/jest.config.js
+**/next.config.js
+**/tsconfig.json
+**/package-lock.json
+**/yarn.lock
+**/pnpm-lock.yaml
+**/.pnpm-store
+**/.vscode
+**/.idea
+**/.DS_Store
+**/*.md
+**/*.log
+**/__tests__
+**/*.test.*
+**/*.spec.*
+**/coverage
+**/tmp
+**/temp
+**/.turbo
+**/.cache
+**/dist
+**/build
+**/out
+**/.husky
+**/.github
+**/.prettierrc
+**/.eslintrc*
+**/jest.setup.js
+**/postcss.config.js
+**/tailwind.config.js
