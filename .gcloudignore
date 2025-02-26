@@ -7,11 +7,6 @@ node_modules/
 .github/
 .gitignore
 
-# Environment and config
-.env*
-.env.local
-.env.*.local
-
 # IDE
 .vscode/
 .idea/
