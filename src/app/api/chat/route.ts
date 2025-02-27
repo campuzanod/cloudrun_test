@@ -19,7 +19,6 @@ export async function POST(req: Request) {
   try {
     const body = await req.json();
     const { messages } = body;
-    console.log(messages)
 
     if (!messages.some((m: Message) => m.role === "system")) {
       messages.unshift({
