@@ -23,11 +23,13 @@ FROM base AS runner
 WORKDIR /app
 ENV NODE_ENV=production
 
-# Add runtime environment variables
-ENV OPENAI_API_KEY=${OPENAI_API_KEY}
+# Pass build argument to runtime stage
+ARG OPENAI_API_KEY
+ENV OPENAI_API_KEY=$OPENAI_API_KEY
 
 COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
+COPY --from=builder /app/public ./public
 
 EXPOSE 3000
 CMD ["node", "server.js"]
