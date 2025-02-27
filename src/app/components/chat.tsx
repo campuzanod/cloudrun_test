@@ -16,6 +16,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import sellSideLogo from "@/public/Sellside Chile.png";
 import fry from "@/public/fry.jpg";
 import Image from "next/image";
+import { products } from "@/utils";
 
 type Message = {
   role: "user" | "assistant" | "system";
@@ -27,7 +28,21 @@ export default function Chat() {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "system",
-      content: "You are a helpful assistant.",
+      content: `You are a helpful shopping assistant for our online store. 
+      You can help customers find products, compare prices, and make purchase recommendations.
+      Here's our product database:
+      ${JSON.stringify(products)}
+      
+      Please help customers find products, compare options, and provide accurate pricing and stock information.
+      Always be friendly and professional. If a product is out of stock or not in our database, 
+      suggest similar alternatives.
+      When answering:
+        - Provide accurate product information
+        - Suggest similar products if the requested product is out of stock
+        - Always be friendly and professional
+        - If you don't have the answer, let the user know
+        - Use the language of the user in your responses
+      `,
     },
   ]);
   const [isLoading, setIsLoading] = useState(false);
