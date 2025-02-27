@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Source control
+.git/
+.github/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+
+# Misc
+*.log
+.DS_Store
+coverage/
+tmp/
+temp/
+
+# Don't ignore these files
+!next.config.js
+!tsconfig.json
+!package.json
+!pnpm-lock.yaml
